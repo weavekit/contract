@@ -3,6 +3,15 @@
 All notable changes to `@weave-kit/contract`. Format follows [Keep a Changelog](https://keepachangelog.com/);
 the project uses [Semantic Versioning](https://semver.org/).
 
+## [2.0.0]
+
+Breaking: the `tenant` vocabulary is removed — `scope` is the single row-scope name.
+
+### Removed
+
+- `ROW_SCOPE_MARKERS.TENANT` (the `tenant: true` field marker) — use `ROW_SCOPE_MARKERS.SCOPE`.
+- `AuditEvent.tenantId` and `AuditQuery.tenantId` — use `scopeId`.
+
 ## [1.0.0]
 
 Initial release. The zero-dependency shared vocabulary used by `@weave-kit/engine`, `@weave-kit/client`
