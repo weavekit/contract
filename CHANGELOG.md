@@ -11,8 +11,15 @@ and `@weave-kit/console`, so no consumer needs the Node server runtime for types
 ### Added
 
 - `@weave-kit/contract` (types): the data-access query contract (`Filter`, `Sort`, `FindOptions`,
-  `FindResult`) and the REST contract (`ApiSort`, `ListQuery`, `ApiErrorBody`, `ApiErrorSpec`,
-  `RestResult`).
+  `FindResult`), the REST contract (`ApiSort`, `ListQuery`, `ApiErrorBody`, `ApiErrorSpec`,
+  `RestResult`), the audit contract (`AuditEvent`, `AuditFilter`, `AuditQuery`, `AuditQueryResult`),
+  the approval shapes (`PendingApproval`, `ApprovalListFilter`), the workflow schema
+  (`WorkflowDefinition`/`WorkflowNode`/`WorkflowAssign`/`WorkflowTimeout`) and the metadata descriptor
+  (`ObjectDescriptor`, `MetadataField`, `MetadataRelation`, `MetadataPermissions`, `MetadataAttrSpec`,
+  `ObjectListEntry`).
 - `@weave-kit/contract/values` (pure `as const`): the schema vocabulary (`FIELD_TYPES`,
   `IDENTITY_OBJECT_NAMES`, `WEAVE_STATUS`, `DETAILS_COLUMNS`, …), the data-access constants
-  (`FILTER_OPS`, `SORT_DIRS`, `TOTAL_MODES`, `WRITE_MODES`, `PAGINATION`) and their derived types.
+  (`FILTER_OPS`, `SORT_DIRS`, `TOTAL_MODES`, `WRITE_MODES`, `PAGINATION`), audit (`AUDIT_ACTOR_TYPES`,
+  `AUDIT_MODES`, `DATA_ACTIONS`, `ACTION_PREFIXES`), approvals (`APPROVAL_STATUSES`), script
+  (`SCRIPT_SOURCE_KINDS`), workflow (`WORKFLOW_*`) and field-type attrs (`ATTR_KINDS`) — plus all
+  derived types.

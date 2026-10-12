@@ -9,4 +9,8 @@
  */
 export type * from './types/query.js';
 export type * from './types/api.js';
+export type * from './types/audit.js';
+export type * from './types/approvals.js';
+export type * from './types/workflow.js';
+export type * from './types/metadata.js';
 export type * from './values.js';

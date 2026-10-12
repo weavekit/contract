@@ -7,3 +7,8 @@
  */
 export * from './values/core.js';
 export * from './values/data-access.js';
+export * from './values/audit.js';
+export * from './values/tools.js';
+export * from './values/script.js';
+export * from './values/workflow.js';
+export * from './values/field-type.js';
