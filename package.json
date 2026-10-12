@@ -1,0 +1,54 @@
+{
+  "name": "@weave-kit/contract",
+  "version": "1.0.0",
+  "description": "WeaveKit contract — the zero-dependency shared type + value surface (schema, query, REST) used by the engine, client and console",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./values": {
+      "types": "./dist/values.d.ts",
+      "default": "./dist/values.js"
+    }
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "weavekit",
+    "contract",
+    "types",
+    "schema",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weavekit/contract.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"tests/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.0"
+  }
+}
