@@ -56,6 +56,8 @@ export interface ApprovalListFilter {
   approvalKey?: string;
   from?: Date;
   to?: Date;
+  /** only entries expiring before this instant */
+  expiresBefore?: Date;
   limit?: number;
   offset?: number;
   sort?: { field: 'createdAt' | 'action' | string; order: 'ASC' | 'DESC' };
