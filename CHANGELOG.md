@@ -3,6 +3,15 @@
 All notable changes to `@weave-kit/contract`. Format follows [Keep a Changelog](https://keepachangelog.com/);
 the project uses [Semantic Versioning](https://semver.org/).
 
+## [2.1.0]
+
+### Added
+
+- `PendingApproval` optional request context and lifecycle fields: `requestedBy`, `onBehalfOf`,
+  `actorLabel`, `requestHash`, `requestId`, `policy`, `expiresAt`, `consumedAt`, `resolvedAt`,
+  `comment`; `ApprovalPolicySnapshot`.
+- `ApprovalListFilter.requestedBy` / `approvalKey`.
+
 ## [2.0.0]
 
 Breaking: the `tenant` vocabulary is removed — `scope` is the single row-scope name.
