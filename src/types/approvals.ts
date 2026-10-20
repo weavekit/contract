@@ -53,6 +53,12 @@ export interface PendingApproval {
   approvedCount?: number;
   /** approver that terminally rejected the request */
   rejectedBy?: string;
+  /** SLA escalation threshold in ms */
+  escalateAfterMs?: number;
+  /** when the SLA escalation fired */
+  escalatedAt?: Date;
+  /** escalation approver snapshot */
+  escalationApprovers?: string[];
 }
 
 /** one approver decision on a pending request */
@@ -63,6 +69,8 @@ export interface ApprovalVote {
   comment?: string;
   /** reserved for multi-stage approvals; P1 uses 0 */
   stage?: number;
+  /** original approver when this vote was cast by a delegate */
+  delegatedBy?: string;
   createdAt: Date;
 }
 
