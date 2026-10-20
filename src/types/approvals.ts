@@ -42,6 +42,28 @@ export interface PendingApproval {
   resolvedAt?: Date;
   /** approver comment (required for rejection in the Console) */
   comment?: string;
+
+  /** quorum required to approve (default 1) */
+  requiredApprovals?: number;
+  /** approver roles snapshot captured at request time */
+  approverRoles?: string[];
+  /** approver groups snapshot captured at request time */
+  approverGroups?: string[];
+  /** approved vote count (derived/persisted by the backend) */
+  approvedCount?: number;
+  /** approver that terminally rejected the request */
+  rejectedBy?: string;
+}
+
+/** one approver decision on a pending request */
+export interface ApprovalVote {
+  approvalKey: string;
+  approver: string;
+  decision: 'approved' | 'rejected';
+  comment?: string;
+  /** reserved for multi-stage approvals; P1 uses 0 */
+  stage?: number;
+  createdAt: Date;
 }
 
 /**
@@ -54,6 +76,8 @@ export interface ApprovalListFilter {
   actorKey?: string;
   requestedBy?: string;
   approvalKey?: string;
+  /** pending entries this subject is eligible to vote on (approver roles/groups) */
+  pendingFor?: string;
   from?: Date;
   to?: Date;
   /** only entries expiring before this instant */
