@@ -1,6 +1,6 @@
 {
   "name": "@weave-kit/contract",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "WeaveKit contract — the zero-dependency shared type + value surface (schema, query, REST) used by the engine, client and console",
   "type": "module",
   "main": "./dist/index.js",

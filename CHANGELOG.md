@@ -3,6 +3,12 @@
 All notable changes to `@weave-kit/contract`. Format follows [Keep a Changelog](https://keepachangelog.com/);
 the project uses [Semantic Versioning](https://semver.org/).
 
+## [2.3.0]
+
+### Added
+
+- ApprovalListFilter.q for free-text search across action / actor / requester / approval key.
+
 ## [2.2.1]
 
 ### Added

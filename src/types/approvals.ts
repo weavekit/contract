@@ -84,6 +84,8 @@ export interface ApprovalListFilter {
   actorKey?: string;
   requestedBy?: string;
   approvalKey?: string;
+  /** free-text search across action / actor / requester / approval key */
+  q?: string;
   /** pending entries this subject is eligible to vote on (approver roles/groups) */
   pendingFor?: string;
   from?: Date;
